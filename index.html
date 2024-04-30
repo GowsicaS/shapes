@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="whole-container">
+        
+        <div class="card">
+            <div class="shape" id="shape"></div>
+            <div class="elements">
+                <p class="count">Count=<span id="count"></span></p>
+                <div class="buttons">
+                    <button class="btn" onclick="count()">Click</button>
+                    <button class="btn" onclick="reset()">Reset</button>
+                    <button class="btn" onclick="red()">Red</button>
+                    <button class="btn" onclick="blue()">Blue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var buttonClicked = "yes";
+        var i = 1;
+        function count(){
+            
+            document.getElementById("count").innerHTML = i;
+            i++;
+            if(i%2==0 && i%5!=0){
+                shape.style = "width:150;";
+            }
+            if(i%5==0){
+                shape.style = "border-radius:100%; width:100px; height:100px";
+            }
+        }
+        function reset(){
+            document.getElementById("count").innerHTML = 0;
+            i = 1;
+        }
+        function red(){
+            shape.style = "background-color:red;";
+        }
+        function blue(){
+            shape.style = "background-color:blue;";
+        }
+    </script>
+</body>
+</html>
